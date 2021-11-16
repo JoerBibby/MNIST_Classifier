@@ -1,3 +1,5 @@
 # MNIST_Classifier
 
-This is a project which explores different techniques for classification, using the MNIST dataset, which contains 70,000 instances of hand drawn digits represented as a 28*28 
+This is a project which explores different techniques for classification using SKlearn on the MNIST dataset, which contains 70,000 instances of hand drawn digits represented as a 784 pixel grid, each pixel having a value signifying the shade of grey. Each data point has a label giving the actual value of the digit it is supposed to represent, so this is a supervised learning task.
+
+Both binary classifiers and native multiclass classifiers were tested and experimented with. A set of labels giving True for all instances of 5 and false otherwise was produced for the application of the binary classifiers (SGDClassifier, and RandomForestClassifier), and thier precision/recall and ROC curves were plotted. The accuracy of several multiclass classifiers was assessed with the cross_val_score function and the KNeighborsClassifier was the highest perfomer. This model was then fine tuned with GridSearchCV and with hyperparameters optimized the model achieved an accuracy of 94%.
